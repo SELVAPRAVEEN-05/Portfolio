@@ -1,3 +1,9 @@
+"use client";
+
+import {
+  Logo
+} from "@/components/icons";
+import { siteConfig } from "@/config/site";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -9,50 +15,104 @@ import {
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
 import NextLink from "next/link";
-
-import {
-  GithubIcon,
-  Logo
-} from "@/components/icons";
-import { siteConfig } from "@/config/site";
+import { useEffect, useState, useRef } from "react";
 import { ThemeSwitch } from "./theme-switch";
-import { Link } from "@heroui/link";
+
+const handleScroll = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 export const Navbar = () => {
+  const [activeSection, setActiveSection] = useState(siteConfig.navItems[0]?.targetId || "");
+  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScrollSpy = () => {
+      const sections = siteConfig.navItems.map(item => document.getElementById(item.targetId));
+      const scrollPosition = window.scrollY + 100; 
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(siteConfig.navItems[i].targetId);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollSpy);
+    handleScrollSpy();
+
+    return () => window.removeEventListener('scroll', handleScrollSpy);
+  }, []);
+
+  // Update underline position when active section changes
+  useEffect(() => {
+    if (navRef.current) {
+      const activeButton = navRef.current.querySelector(`[data-target="${activeSection}"]`) as HTMLElement;
+      if (activeButton) {
+        const navRect = navRef.current.getBoundingClientRect();
+        const buttonRect = activeButton.getBoundingClientRect();
+        
+        setUnderlineStyle({
+          left: buttonRect.left - navRect.left,
+          width: buttonRect.width
+        });
+      }
+    }
+  }, [activeSection]);
+
+  const handleNavClick = (targetId: string) => {
+    setActiveSection(targetId);
+    handleScroll(targetId);
+  };
 
   return (
-    <HeroUINavbar className="w-full flex bg-transparent" position="sticky">
-      <div className="w-full flex justify-between" >
+    <HeroUINavbar maxWidth="xl" className="flex bg-transparent" position="sticky">
+      <div className="w-full flex justify-between">
         <div className="gap-3">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
             <p className="font-bold text-inherit">PortFolio</p>
           </NextLink>
         </div>
-        <div className="hidden lg:flex gap-4 justify-start ml-2">
+
+        <div className="hidden lg:flex gap-4 justify-start ml-2 relative" ref={navRef}>
+          {/* Animated underline */}
+          <div 
+            className="absolute bottom-1 h-0.5 bg-primary transition-all duration-300 ease-out rounded-full"
+            style={{
+              left: `${underlineStyle.left}px`,
+              width: `${underlineStyle.width}px`,
+              transform: 'translateY(8px)'
+            }}
+          />
+          
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
+            <NavbarItem key={item.targetId}>
+              <button
+                data-target={item.targetId}
+                onClick={() => handleNavClick(item.targetId)}
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "cursor-pointer transition-colors duration-200 relative mx-2 pt-2 ",
+                  activeSection === item.targetId 
+                    ? "text-primary font-medium" 
+                    : "hover:text-primary"
                 )}
-                color="foreground"
-                href={item.href}
               >
                 {item.label}
-              </NextLink>
+              </button>
             </NavbarItem>
           ))}
         </div>
       </div>
 
-      {/* <div><ThemeSwitch /></div> */}
-
       <NavbarContent className="lg:hidden" justify="end">
-        {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link> */}
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
@@ -61,24 +121,21 @@ export const Navbar = () => {
         <div className="mx-4 mt-4 flex flex-col gap-4">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navItems.length 
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
+              <button
+                onClick={() => handleNavClick(item.targetId)}
+                className={clsx(
+                  "text-lg font-medium transition-colors duration-200",
+                  activeSection === item.targetId 
+                    ? "text-primary font-semibold" 
+                    : "text-foreground hover:text-primary"
+                )}
               >
                 {item.label}
-              </Link>
+              </button>
             </NavbarMenuItem>
           ))}
         </div>
       </NavbarMenu>
-
     </HeroUINavbar>
   );
 };

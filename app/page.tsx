@@ -8,12 +8,12 @@ import Skills from "./skills/page";
 export default function Page() {
   return (
     <div>
-      <Home />
-      <AboutUs />
-      <Skills />
-      <Projects />
-      <ContactUs />
-      {/* Add more components or pages as needed */}
+      <section id="home"><Home /></section>
+      <section id="about"><AboutUs /></section>
+      <section id="skills"><Skills /></section>
+      <section id="projects"><Projects /></section>
+      <section id="contact"><ContactUs /></section>
     </div>
   );
 }
+
