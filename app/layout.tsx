@@ -47,14 +47,14 @@ export default function RootLayout({
     [&::-webkit-scrollbar]:w-1.5
     [&::-webkit-scrollbar-thumb]:rounded-full
     [&::-webkit-scrollbar-track]:bg-[transparent]
-    [&::-webkit-scrollbar-thumb]:bg-blue-900"
+    [&::-webkit-scrollbar-thumb]:bg-primary"
           >
             <Navbar />
             <main>{children}</main>
           </div>
 
         </Providers>
-       
+
 
       </body>
 

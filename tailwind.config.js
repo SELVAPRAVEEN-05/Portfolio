@@ -9,6 +9,7 @@ const config = {
   ],
   theme: {
   	extend: {
+		
   		fontFamily: {
   			sans: [
   				'var(--font-sans)'
@@ -66,7 +67,7 @@ const config = {
   		}
   	}
   },
-  darkMode: ["class", 'class'],
+  darkMode: "class",
   plugins: [heroui(), require("tailwindcss-animate")],
 }
 
