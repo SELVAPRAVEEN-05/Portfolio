@@ -34,25 +34,31 @@ export const Navbar = () => {
 };
 
 
-  useEffect(() => {
-    const handleScrollSpy = () => {
-      const sections = siteConfig.navItems.map(item => document.getElementById(item.targetId));
-      const scrollPosition = window.scrollY+300;   
-        
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(siteConfig.navItems[i].targetId);
-          break;
-        }
+useEffect(() => {
+  const container = document.getElementById("scroll-container");
+  const handleScrollSpy = () => {
+    const sections = siteConfig.navItems.map(item =>
+      document.getElementById(item.targetId)
+    );
+
+    if (!container) return;
+    const scrollPosition = container.scrollTop + 300;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      if (section && section.offsetTop <= scrollPosition) {
+        setActiveSection(siteConfig.navItems[i].targetId);
+        break;
       }
-    };
+    }
+  };
 
-    window.addEventListener('wheel', handleScrollSpy);
-    handleScroll(activeSection)
+  container?.addEventListener("wheel", handleScrollSpy);
+  handleScrollSpy(); // initial run
 
-    return () => window.removeEventListener('wheel', handleScrollSpy);
-  }, []);
+  return () => container?.removeEventListener("wheel", handleScrollSpy);
+}, []);
+
 
   useEffect(() => {
     if (navRef.current) {
@@ -75,7 +81,7 @@ export const Navbar = () => {
   };
 
   return (
-    <HeroUINavbar maxWidth="xl" className="flex bg-transparent" position="sticky">
+    <HeroUINavbar maxWidth="xl" className="flex bg-opacity-30" position="sticky">
       <div className="w-full flex justify-between">
         <div className="gap-3">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -112,6 +118,9 @@ export const Navbar = () => {
               </button>
             </NavbarItem>
           ))}
+        </div>
+        <div className="hidden items-center lg:flex">
+        <ThemeSwitch />
         </div>
       </div>
 
