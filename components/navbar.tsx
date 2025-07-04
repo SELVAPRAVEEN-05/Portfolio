@@ -18,23 +18,27 @@ import NextLink from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { ThemeSwitch } from "./theme-switch";
 
-const handleScroll = (id: string) => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-  }
-};
+
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState(siteConfig.navItems[0]?.targetId || "");
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
   const navRef = useRef<HTMLDivElement>(null);
 
+
+  const handleScroll = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+
   useEffect(() => {
     const handleScrollSpy = () => {
       const sections = siteConfig.navItems.map(item => document.getElementById(item.targetId));
-      const scrollPosition = window.scrollY + 100; 
-
+      const scrollPosition = window.scrollY+300;   
+        
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
@@ -44,13 +48,12 @@ export const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScrollSpy);
-    handleScrollSpy();
+    window.addEventListener('wheel', handleScrollSpy);
+    handleScroll(activeSection)
 
-    return () => window.removeEventListener('scroll', handleScrollSpy);
+    return () => window.removeEventListener('wheel', handleScrollSpy);
   }, []);
 
-  // Update underline position when active section changes
   useEffect(() => {
     if (navRef.current) {
       const activeButton = navRef.current.querySelector(`[data-target="${activeSection}"]`) as HTMLElement;
