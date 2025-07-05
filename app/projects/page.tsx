@@ -7,7 +7,7 @@ export default function Projects() {
   const { theme } = useTheme();
 
   return (
-    <div className='h-[500px] bg-red-300 mb-10 dark:bg-black text-black dark:text-white'>
+    <div className=' mb-10 dark:bg-black text-black dark:text-white'>
       hii
     </div>
   );

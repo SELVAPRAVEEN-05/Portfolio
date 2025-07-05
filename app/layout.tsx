@@ -1,9 +1,7 @@
 import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
-
 import { Providers } from "./providers";
-
 import { Navbar } from "@/components/navbar";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
@@ -44,20 +42,16 @@ export default function RootLayout({
           <div
             id="scroll-container"
             className="h-screen overflow-y-scroll
-    [&::-webkit-scrollbar]:w-1.5
-    [&::-webkit-scrollbar-thumb]:rounded-full
-    [&::-webkit-scrollbar-track]:bg-[transparent]
-    [&::-webkit-scrollbar-thumb]:bg-primary"
+            [&::-webkit-scrollbar]:w-1.5
+            [&::-webkit-scrollbar-thumb]:rounded-full
+            [&::-webkit-scrollbar-track]:bg-[transparent]
+            [&::-webkit-scrollbar-thumb]:bg-primary"
           >
             <Navbar />
             <main>{children}</main>
           </div>
-
         </Providers>
-
-
       </body>
-
     </html>
   );
 }

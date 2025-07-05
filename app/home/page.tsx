@@ -87,7 +87,7 @@ export default function AboutUs() {
   return (
     <>
       <Script src="/particles.min.js" strategy="beforeInteractive" />
-      <div className="min-h-[90vh] relative">
+      <div className="min-h-screen relative bg-gray-100 dark:bg-transparent">
         <div id="particles-js" className="absolute inset-0 z-0" />
         <section id="home" className="relative w-full bg-transparent">
           <div className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-20 sm:py-24 md:py-32">

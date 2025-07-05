@@ -81,7 +81,7 @@ useEffect(() => {
   };
 
   return (
-    <HeroUINavbar maxWidth="xl" className="flex bg-opacity-30" position="sticky">
+    <HeroUINavbar maxWidth="xl" className="flex bg-opacity-30 shadow-lg" position="sticky">
       <div className="w-full flex justify-between">
         <div className="gap-3">
           <NextLink className="flex justify-start items-center gap-1" href="/">
