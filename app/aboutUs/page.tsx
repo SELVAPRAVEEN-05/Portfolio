@@ -1,49 +1,50 @@
 "use client";
-import { ImPointRight } from "react-icons/im";
 import Image from "next/image";
-import laptopImg from "@/public/laptop.png";
+import laptopImg from "@/public/images/photo.jpg";
 
 export default function AboutUs() {
   return (
-    <div className="h-screen px-4 py-4">
-      <div className="text-4xl font-serif pt-36 pb-24 text-center w-2/3">
-        Know Who <strong className="text-purple-600">I'M</strong>
+    <section className="min-h-screen w-full py-24 px-6">
+      {/* Top Divider */}
+      <div className="bg-primary h-[1px] w-3/5 my-7"></div>
+      {/* Heading */}
+      <h2 className="text-3xl sm:text-4xl font-serif text-center">
+        Know Who <span className="text-purple-600 font-bold">I'M</span>
+      </h2>
+      {/* Bottom Divider */}
+      <div className="w-full flex justify-end">
+        <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       </div>
-      <div className="flex justify-between">
-        <div className="w-2/5  flex justify-center">
-          {/* <Image
-          src={laptopImg}
-          alt="about"
-          className="w-full h-auto max-w-sm"
-          priority
-        /> */}
-        <div className="bg-blue-50 w-80">
-          hi
+
+      {/* Content Layout */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-12 pt-10 lg:px-12 xl:px-28">
+        {/* Left - Image */}
+        <div className="w-full md:w-1/3 lg:w-1/4 h-80 sm:h-96 overflow-hidden shadow-lg flex items-center justify-center">
+          <Image
+            src={laptopImg}
+            alt="Laptop"
+            className="object-cover w-full h-full rounded-xl"
+            priority
+          />
         </div>
+
+        {/* Right - Text */}
+        <div className="w-full md:w-2/3 text-sm xl:text-xl lg:text-lg leading-relaxed">
+          <p>
+            Hi, I am <span className="text-purple-500 font-semibold">SELVAPRAVEEN S</span>, a 21-year-old Full Stack Web Developer and
+            third-year <span className="font-medium">B.E. CSE</span> student at Bannari Amman Institute of Technology.<span className="hidden xl:block"> I'm from Tiruppur and passionate about building modern, user-friendly web applications.</span>
+          </p>
+
+          <p className="mt-6">
+            I work mainly with the <span className="text-green-400 font-medium">MERN STACK</span> to create responsive websites and
+            full-stack clones.<span className="hidden md:block"> I'm always exploring new technologies to improve my skills and enjoy bringing creative ideas to life through code.</span>
+          </p>
+
+          <p className="mt-6">
+            Beyond coding, I love playing <span className="text-yellow-400 font-semibold">CHESS</span>,<span className="hidden lg:block"> which sharpens my strategic thinking and problem-solving. I'm currently focused on personal projects to continue growing as a developer.</span>
+          </p>
         </div>
-          <div className="w-3/5 pl-32 pr-20 text-xl">
-            <p>
-              Hi Everyone, I am <span className="text-purple-600 font-semibold">Selvapraveen S</span> from{" "}
-              <span className="text-purple-600 font-semibold">Tamil Nadu, India.</span>
-              <br />
-              I am very passionate about improving my coding skills & developing applications & websites. I build WebApps and Websites using MERN Stack. Working for myself to improve my skills. Love to build Full-Stack clones.
-              <br />
-              <br />
-              Apart from coding, some other activities that I love to do!
-            </p>
-            <ul className="list-none pl-2 pt-2 space-y-2">
-              <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                <ImPointRight className="text-purple-500" /> Playing Games
-              </li>
-              <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                <ImPointRight className="text-purple-500" /> Watching Movies
-              </li>
-              <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                <ImPointRight className="text-purple-500" /> Travelling
-              </li>
-            </ul>
-          </div>
       </div>
-    </div>
+    </section>
   );
 }

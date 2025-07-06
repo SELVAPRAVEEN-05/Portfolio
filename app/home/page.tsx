@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-export default function AboutUs() {
+export default function Home() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function AboutUs() {
         },
         move: {
           enable: true,
-          speed: 6,
+          speed: 10,
         },
       },
       interactivity: {
@@ -86,12 +86,11 @@ export default function AboutUs() {
 
   return (
     <>
-      <Script src="/particles.min.js" strategy="beforeInteractive" />
+      {/* <Script src="/particles.min.js" strategy="beforeInteractive" /> */}
       <div className="min-h-screen relative bg-gray-100 dark:bg-transparent">
         <div id="particles-js" className="absolute inset-0 z-0" />
-        <section id="home" className="relative w-full bg-transparent">
-          <div className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-20 sm:py-24 md:py-32">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+          <div className="px-7 md:px-7 lg:px-20 xl:px-32 py-20 sm:py-24 md:py-40">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between">
               {/* Text Section */}
               <div className="w-full md:w-7/12 text-center md:text-left">
                 <h1 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -110,14 +109,13 @@ export default function AboutUs() {
               </div>
 
               {/* Lottie Animation Section */}
-              <div className="w-full md:w-5/12 flex justify-center">
+              <div className="w-full md:w-5/12 flex md:justify-end justify-center">
                 <div className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px]">
                   <Lottie animationData={animationData} loop={true} />
                 </div>
               </div>
             </div>
           </div>
-        </section>
       </div>
     </>
   );

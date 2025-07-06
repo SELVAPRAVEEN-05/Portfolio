@@ -18,8 +18,6 @@ import NextLink from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { ThemeSwitch } from "./theme-switch";
 
-
-
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState(siteConfig.navItems[0]?.targetId || "");
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
@@ -81,8 +79,8 @@ useEffect(() => {
   };
 
   return (
-    <HeroUINavbar maxWidth="xl" className="flex bg-opacity-30 shadow-lg" position="sticky">
-      <div className="w-full flex justify-between">
+    <HeroUINavbar maxWidth="full" className="flex bg-opacity-30 shadow-lg" position="sticky">
+      <div className="w-full lg:px-12 xl:px-28 flex justify-between">
         <div className="gap-3">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
@@ -90,7 +88,7 @@ useEffect(() => {
           </NextLink>
         </div>
 
-        <div className="hidden lg:flex gap-4 justify-start ml-2 relative" ref={navRef}>
+        <div className="hidden lg:flex gap-4 justify-start  relative" ref={navRef}>
           {/* Animated underline */}
           <div 
             className="absolute bottom-1 h-0.5 bg-primary transition-all duration-300 ease-out rounded-full"
