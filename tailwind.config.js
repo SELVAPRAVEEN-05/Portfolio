@@ -75,9 +75,6 @@ const config = {
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
       },
-      images: {
-    domains: ["media.licdn.com"],
-  },
     },
   },
   darkMode: "class",
