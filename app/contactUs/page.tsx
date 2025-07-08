@@ -3,9 +3,9 @@
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
 
-// Dynamically import Lottie to avoid SSR mismatch
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import animationData from "../../public/animations/cantact.json";
+
+import animationData from "@/components/assets/cantact.json";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -23,36 +23,24 @@ export default function ContactUs() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Thanks for reaching out! ✨");
-
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <div className="min-h-screen w-full px-6 py-16 flex flex-col">
-      {/* Title */}
+    <div className="relative min-h-screen w-full px-6 py-16 flex flex-col">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
-      {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-serif text-center">
-        Lets {" "}<span className="text-purple-600 font-bold">Connect</span>
+        Let's <span className="text-purple-600 font-bold">Connect</span>
       </h2>
-      {/* Bottom Divider */}
       <div className="w-full flex justify-end">
-        <div className="bg-primary h-[1px] w-3/5 my-7">
-        </div>
+        <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       </div>
 
-      {/* Content Layout */}
-      <div className="w-full flex flex-col lg:px-12  xl:px-24 lg:flex-row items-center justify-between gap-12">
-        {/* Lottie */}
+      <div className="w-full flex flex-col lg:px-12 xl:px-24 lg:flex-row items-center justify-between gap-12">
         <div className="relative w-full md:w-3/5 lg:w-2/5">
           <Lottie animationData={animationData} loop={true} />
         </div>
 
-        {/* Form Section */}
         <div className="w-full xl:w-2/5 lg:w-1/2 border border-slate-300 dark:border-slate-700 p-6 rounded-md shadow-lg backdrop-blur-lg bg-white/20 dark:bg-black/20">
           <form onSubmit={handleSubmit}>
             <InputField
@@ -63,7 +51,6 @@ export default function ContactUs() {
               value={formData.name}
               onChange={handleChange}
             />
-
             <InputField
               label="Email Address"
               id="email"
@@ -72,7 +59,6 @@ export default function ContactUs() {
               value={formData.email}
               onChange={handleChange}
             />
-
             <div className="flex flex-col mb-4 space-y-2">
               <label htmlFor="message" className="text-sm font-medium">
                 Message
@@ -86,7 +72,6 @@ export default function ContactUs() {
                 required
               />
             </div>
-
             <button
               type="submit"
               className="w-full h-10 bg-blue-900 text-white font-semibold rounded-md hover:brightness-110 transition"
@@ -94,49 +79,49 @@ export default function ContactUs() {
               Let's Connect 🚀
             </button>
 
-            {/* Social Buttons */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between">
               <SocialButton
                 label="Phone"
-                link="tel:+919025174530"
-                color="bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700  mt-6"
+                link="tel:+91234567890"
+                color="bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 mt-6"
               />
               <SocialButton
                 label="Whatsapp"
-                link="https://wa.me/+919025174530"
-                color="bg-gradient-to-r from-green-600 to-green-800 dark:from-emerald-400 dark:to-emerald-600  mt-6"
+                link="https://wa.me/+911234567890"
+                color="bg-gradient-to-r from-green-600 to-green-800 dark:from-emerald-400 dark:to-emerald-600 mt-6"
               />
               <SocialButton
                 label="Email"
-                link="mailto:elvapraveen2005@gmail.com"
-                color="bg-gradient-to-r from-rose-400 to-red-500 dark:from-red-700 dark:to-rose-600  mt-6"
+                link="mailto:selvapraveen2005@gmail.com"
+                color="bg-gradient-to-r from-rose-400 to-red-500 dark:from-red-700 dark:to-rose-600 mt-6"
               />
             </div>
           </form>
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="text-center text-xs lg:text-sm text-neutral-500 mt-10 flex flex-col md:flex-row items-center justify-center gap-2">
         <div className="flex gap-2">
-          <p>Designed & Developed by {" "}</p>
-          <p><a
-            href="/"
-            className="text-purple-400 underline decoration-blue-400"
-          >
-            SELVAPRAVEEN S
-          </a></p>
+          <p>Designed & Developed by</p>
+          <p>
+            <a
+              href="/"
+              className="text-purple-400 underline decoration-blue-400"
+            >
+              SELVAPRAVEEN S
+            </a>
+          </p>
         </div>
         <span className="hidden sm:inline">|</span>
         <span className="font-semibold">© 2025 SELVAPRAVEEN S</span>
         <span className="hidden sm:inline">|</span>
-        <span>selvapraveen2005@gmail.com</span>
+        <span>© selvapraveen2005@gmail.com</span>
       </footer>
     </div>
   );
 }
 
-// Reusable Input field
+// Reusable input field
 function InputField({
   label,
   id,

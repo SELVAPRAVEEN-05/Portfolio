@@ -32,16 +32,22 @@ export default function AboutUs() {
         <div className="w-full md:w-2/3 text-sm xl:text-xl lg:text-lg leading-relaxed">
           <p>
             Hi, I am <span className="text-purple-500 font-semibold">SELVAPRAVEEN S</span>, a 21-year-old Full Stack Web Developer and
-            third-year <span className="font-medium">B.E. CSE</span> student at Bannari Amman Institute of Technology.<span className="hidden xl:block"> I'm from Tiruppur and passionate about building modern, user-friendly web applications.</span>
+            third-year <span className="font-medium">B.E. CSE</span> student at Bannari Amman Institute of Technology.<span className="hidden xl:inline"> I'm from Tiruppur and passionate about building modern, user-friendly web applications.</span>
           </p>
 
           <p className="mt-6">
             I work mainly with the <span className="text-green-400 font-medium">MERN STACK</span> to create responsive websites and
-            full-stack clones.<span className="hidden md:block"> I'm always exploring new technologies to improve my skills and enjoy bringing creative ideas to life through code.</span>
+            full-stack clones.<span className="hidden md:inline"> I'm always exploring new technologies to improve my skills and enjoy bringing creative ideas to life through code.</span>
           </p>
 
           <p className="mt-6">
-            Beyond coding, I love playing <span className="text-yellow-400 font-semibold">CHESS</span>,<span className="hidden lg:block"> which sharpens my strategic thinking and problem-solving. I'm currently focused on personal projects to continue growing as a developer.</span>
+            Beyond coding, I love playing{" "}
+            <span className="text-yellow-400 font-semibold">CHESS</span>,
+            <span className="hidden lg:inline">
+              {" "}
+              which sharpens my strategic thinking and problem-solving. I'm currently
+              focused on personal projects to continue growing as a developer.
+            </span>
           </p>
         </div>
       </div>
