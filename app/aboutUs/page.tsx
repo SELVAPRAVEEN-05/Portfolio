@@ -4,7 +4,7 @@ import laptopImg from "@/public/images/photo.jpg";
 
 export default function AboutUs() {
   return (
-    <section className="min-h-screen w-full py-24 px-6">
+    <section className="min-h-screen w-full py-24">
       {/* Top Divider */}
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       {/* Heading */}
@@ -17,9 +17,9 @@ export default function AboutUs() {
       </div>
 
       {/* Content Layout */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-12 pt-10 lg:px-12 xl:px-28">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10 sm:gap-12 pt-10 px-6 lg:px-16 xl:px-32">
         {/* Left - Image */}
-        <div className="w-full md:w-1/3 lg:w-1/4 h-80 sm:h-96 overflow-hidden shadow-lg flex items-center justify-center">
+        <div className="w-full md:w-2/5 lg:w-1/4 h-80 sm:h-96 md:h-80 lg:h-96  overflow-hidden shadow-lg flex items-center justify-center">
           <Image
             src={laptopImg}
             alt="Laptop"
@@ -43,7 +43,7 @@ export default function AboutUs() {
           <p className="mt-6">
             Beyond coding, I love playing{" "}
             <span className="text-yellow-400 font-semibold">CHESS</span>,
-            <span className="hidden lg:inline">
+            <span className="hidden md:inline">
               {" "}
               which sharpens my strategic thinking and problem-solving. I'm currently
               focused on personal projects to continue growing as a developer.

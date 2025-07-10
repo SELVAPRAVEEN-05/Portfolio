@@ -20,11 +20,11 @@ export default function LayoutPage() {
 
   return (
     <div className="relative overflow-hidden bg-background">
-      {/* <section id="home"><Home /></section> */}
-      {/* <section id="about"><AboutUs /></section> */}
-      {/* <section id="skills"><Skills /></section> */}
+      <section id="home"><Home /></section> 
+      <section id="about"><AboutUs /></section>
+      <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
-      {/* <section id="contact"><ContactUs /></section> */}
+      <section id="contact"><ContactUs /></section>
       {/* <Particles
         className="absolute inset-0 z-0"
         quantity={100}

@@ -28,7 +28,6 @@ export default function Projects() {
         "PostgreSQL",
         "Tailwind",
         "Prisma",
-        "HuggingFace AI",
       ],
       githubLink: "https://github.com/MayankUghade/NewsNugget",
       liveLink: "https://news-nugget.vercel.app/",
@@ -39,7 +38,7 @@ export default function Projects() {
       title: "InsightFul",
       description:
         "InsightFul is a fullstack tool that helps saas developers collect valuable user feedback and insights to improve your product and delight your customers.",
-      tags: ["React", "Next.js", "Tailwind", "Next-Auth", "MongoDB", "Vercel"],
+      tags: ["React", "Next.js", "Tailwind", "Next-Auth", "Mongo DB", "Vercel"],
       githubLink: "https://github.com/MayankUghade/InsightFul",
       liveLink: "https://insightful-two.vercel.app/",
       imageUrl:
@@ -49,7 +48,7 @@ export default function Projects() {
       title: "Epic-Energize",
       description:
         "Epic-Energize is a fitness app with a comprehensive exercise database and RapidAPI integration, providing structured workouts.",
-      tags: ["React", "Tailwind", "RapidAPI"],
+      tags: ["React", "Tailwind", "RapidAPI","Node", "Vercel"],
       githubLink: "https://github.com/MayankUghade/Epic-Energize",
       liveLink: "https://epic-energize.vercel.app/",
       imageUrl:
@@ -58,20 +57,26 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen mb-10 w-full flex flex-col items-center justify-center mt-[200px]">
-      <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
-      </h1>
+    <div className="min-h-screen py-20 w-full flex flex-col justify-center">
+      
+      <div className="bg-primary h-[1px] w-3/5 my-7"></div>
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-4xl font-serif text-center">
+       A small selection of{" "} <span className="text-purple-600 font-bold">Recent projects</span>
+      </h2>
+      {/* Bottom Divider */}
+      <div className="w-full flex justify-end">
+        <div className="bg-primary h-[1px] w-3/5 my-7"></div>
+      </div>
 
-      <div className="flex flex-wrap gap-5 items-center justify-center">
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-5 px-6 lg:px-16 xl:px-32">
         {projectsData.map((data) => (
           <ProjectCard key={data.title} data={data} />
         ))}
       </div>
 
-      <button className="mt-6 underline text-sm text-purple-500 hover:text-purple-600 transition">
-        <Link href="/myprojects">More Projects</Link>
+      <button className="mt-8 underline text-sm text-purple-500 hover:text-purple-600 transition">
+        <Link href={"https://github.com"}>More Projects</Link>
       </button>
     </div>
   );

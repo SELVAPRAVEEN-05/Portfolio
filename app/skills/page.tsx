@@ -1,3 +1,5 @@
+"use client"
+
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import {
   FaGitAlt,
@@ -22,10 +24,10 @@ import {
   SiNextdotjs,
   SiTailwindcss
 } from "react-icons/si";
-
 import { Marquee } from "@/components/magicui/marquee";
 import Link from "next/link";
-import { Globe } from "@/components/magicui/globe";
+import laptopImg from "@/public/images/skills.jpg";
+import Image from "next/image";
 
 const skills = [
   { name: "HTML", icon: <IoLogoHtml5 className="text-4xl" /> },
@@ -55,10 +57,15 @@ export default function Skills() {
   const secondRow = skills.slice(skills.length / 2);
 
   return (
-    <div className="min-h-screen relative flex py-40 lg:px-20 xl:px-32">
-      {/* Top Divider */}
-      <div className="w-3/5">
-        <div className="pt-10 px-6 w-full">
+    <div className="relative py-28 ">
+      <div className="bg-primary h-[1px] w-3/5 my-7"></div>
+      <h2 className="text-3xl sm:text-4xl font-serif text-center">
+        My <span className="text-purple-600 font-bold">Skills</span>
+      </h2>
+      <div className="w-full flex justify-end">
+        <div className="bg-primary h-[1px] w-3/5 my-7"></div>
+      </div>
+        <div className="pt-10 px-6 lg:px-20 xl:px-32 w-full">
         <Marquee pauseOnHover className="[--duration:20s] w-full">
           {firstRow.map((skill) => (
             <ReviewCard key={skill.name} {...skill} />
@@ -70,7 +77,8 @@ export default function Skills() {
           ))}
         </Marquee>
       </div>
-        <div className="flex w-1/3 flex-col gap-5 px-5 pt-5 border rounded-lg">
+      <div className="px-6 lg:px-20 xl:px-32 w-full  flex justify-between">
+        <div className="flex w-full md:w-2/5 flex-col mt-8 gap-5 p-5 border rounded-lg">
           <div className="flex gap-2 ">
             <FaLink className="text-xl" />
             <h1 className=" text-sm text-gray-400">Connect with me</h1>
@@ -124,23 +132,16 @@ export default function Skills() {
             </Link>
           </div>
       </div>
+     {/* <div className="w-full hidden lg:w-1/2 overflow-hidden shadow-lg lg:flex items-center justify-center">
+          <Image
+            src={laptopImg}
+            alt="Laptop"
+            className="object-cover w-full h-full rounded-xl"
+            priority
+          />
+        </div> */}
       </div>
-      <div className="relative flex size-full w-2/5 h-[600px] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pt-8">
-          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-            Globe
-          </span>
-          <Globe className="bottom-0" />
-          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
-        </div>
+      
     </div>
   );
 }
-
-
-{/* <div className="bg-primary h-[1px] w-3/5 my-7"></div>
-      <h2 className="text-3xl sm:text-4xl font-serif text-center">
-        <span className="text-purple-600 font-bold">Skills</span>{" "}Known
-      </h2>
-      <div className="w-full flex justify-end">
-        <div className="bg-primary h-[1px] w-3/5 my-7"></div>
-      </div> */}

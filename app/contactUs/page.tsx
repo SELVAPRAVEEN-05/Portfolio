@@ -2,9 +2,9 @@
 
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
+import { FaPhone, FaWhatsapp, FaEnvelope } from "react-icons/fa6";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-
 import animationData from "@/components/assets/cantact.json";
 
 export default function ContactUs() {
@@ -27,7 +27,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="relative min-h-screen w-full px-6 py-16 flex flex-col">
+    <div className="relative min-h-screen w-full py-16 flex flex-col">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       <h2 className="text-3xl sm:text-4xl font-serif text-center">
         Let's <span className="text-purple-600 font-bold">Connect</span>
@@ -36,7 +36,7 @@ export default function ContactUs() {
         <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       </div>
 
-      <div className="w-full flex flex-col lg:px-12 xl:px-24 lg:flex-row items-center justify-between gap-12">
+      <div className="w-full flex flex-col px-6 lg:px-16 xl:px-32 lg:flex-row items-center justify-between gap-12">
         <div className="relative w-full md:w-3/5 lg:w-2/5">
           <Lottie animationData={animationData} loop={true} />
         </div>
@@ -83,16 +83,19 @@ export default function ContactUs() {
               <SocialButton
                 label="Phone"
                 link="tel:+91234567890"
+                icon={<FaPhone className="mr-2" />}
                 color="bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 mt-6"
               />
               <SocialButton
                 label="Whatsapp"
                 link="https://wa.me/+911234567890"
+                icon={<FaWhatsapp className="mr-2" />}
                 color="bg-gradient-to-r from-green-600 to-green-800 dark:from-emerald-400 dark:to-emerald-600 mt-6"
               />
               <SocialButton
                 label="Email"
                 link="mailto:selvapraveen2005@gmail.com"
+                icon={<FaEnvelope className="mr-2" />}
                 color="bg-gradient-to-r from-rose-400 to-red-500 dark:from-red-700 dark:to-rose-600 mt-6"
               />
             </div>
@@ -155,15 +158,17 @@ function InputField({
   );
 }
 
-// Reusable Social Button
+// Reusable Social Button with Icon
 function SocialButton({
   label,
   link,
   color,
+  icon,
 }: {
   label: string;
   link: string;
   color: string;
+  icon: React.ReactNode;
 }) {
   return (
     <a
@@ -172,6 +177,7 @@ function SocialButton({
       rel="noopener noreferrer"
       className={`w-full sm:w-[calc(33%-0.5rem)] text-center h-10 rounded-md ${color} text-white font-medium flex items-center justify-center hover:opacity-90 transition`}
     >
+      {icon}
       {label}
     </a>
   );
