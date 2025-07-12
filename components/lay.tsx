@@ -25,13 +25,13 @@ export default function LayoutPage() {
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
       <section id="contact"><ContactUs /></section>
-      {/* <Particles
+      <Particles
         className="absolute inset-0 z-0"
         quantity={100}
         ease={80}
         color={color}
         refresh
-      /> */}
+      />
     </div>
   );
 }

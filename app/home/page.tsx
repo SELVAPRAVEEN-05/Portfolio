@@ -86,7 +86,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <Script src="/particles.min.js" strategy="beforeInteractive" /> */}
+      <Script src="/particles.min.js" strategy="beforeInteractive" />
       <div className="min-h-screen relative bg-gray-100 dark:bg-transparent">
         <div id="particles-js" className="absolute inset-0 z-0" />
           <div className="px-7 md:px-7 lg:px-20 xl:px-32 py-20 sm:py-24 md:py-40">
