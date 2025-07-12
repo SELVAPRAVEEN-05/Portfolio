@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://img.freepik.com/premium-vector/sp-letter-logo-design-with-circle-shape-sp-circle-cube-shape-logo-design-sp-monogram-busine_629210-698.jpg",
   },
 };
 

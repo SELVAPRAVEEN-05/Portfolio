@@ -17,6 +17,7 @@ import clsx from "clsx";
 import NextLink from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { ThemeSwitch } from "./theme-switch";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState(siteConfig.navItems[0]?.targetId || "");
@@ -83,7 +84,11 @@ useEffect(() => {
       <div className="w-full lg:px-12 xl:px-28 flex justify-between">
         <div className="gap-3">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={40} 
+              height={40}/>
             <p className="font-bold text-inherit">PortFolio</p>
           </NextLink>
         </div>

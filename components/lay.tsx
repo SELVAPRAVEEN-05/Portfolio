@@ -9,6 +9,7 @@ import AboutUs from "@/app/aboutUs/page";
 import Projects from "@/app/projects/page";
 import ContactUs from "@/app/contactUs/page";
 import Home from "@/app/home/page";
+import Footer from "@/app/footer/page";
 
 export default function LayoutPage() {
   const { resolvedTheme } = useTheme();
@@ -25,6 +26,7 @@ export default function LayoutPage() {
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
       <section id="contact"><ContactUs /></section>
+      <section id="footer"><Footer /></section>
       <Particles
         className="absolute inset-0 z-0"
         quantity={100}

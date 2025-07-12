@@ -102,24 +102,6 @@ export default function ContactUs() {
           </form>
         </div>
       </div>
-
-      <footer className="text-center text-xs lg:text-sm text-neutral-500 mt-10 flex flex-col md:flex-row items-center justify-center gap-2">
-        <div className="flex gap-2">
-          <p>Designed & Developed by</p>
-          <p>
-            <a
-              href="/"
-              className="text-purple-400 underline decoration-blue-400"
-            >
-              SELVAPRAVEEN S
-            </a>
-          </p>
-        </div>
-        <span className="hidden sm:inline">|</span>
-        <span className="font-semibold">© 2025 SELVAPRAVEEN S</span>
-        <span className="hidden sm:inline">|</span>
-        <span>© selvapraveen2005@gmail.com</span>
-      </footer>
     </div>
   );
 }

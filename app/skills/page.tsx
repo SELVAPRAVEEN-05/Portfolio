@@ -59,22 +59,15 @@ export default function Skills() {
 const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Developer - Crayond",
+    desc: "I completed a one-year internship at Crayond, where I built fully responsive websites using Next.js, Tailwind CSS, and HeroUI. During my internship, I contributed to multiple projects, including Fynro, a finance management platform, and Revature, an educational website.",
     className: "md:col-span-2",
-    thumbnail: "https://www.shutterstock.com/image-vector/logo-design-houses-residences-villages-260nw-2462964785.jpg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "https://www.shutterstock.com/image-vector/logo-design-houses-residences-villages-260nw-2462964785.jpg",
   },
 ];
 
   return (
-    <div className="relative py-16">
+    <div className="relative py-24">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       <h2 className="text-3xl sm:text-4xl font-serif text-center">
         My <span className="text-purple-600 font-bold">Skills</span>
@@ -94,8 +87,8 @@ const workExperience = [
           ))}
         </Marquee>
       </div>
-      <div className="px-6 lg:px-20 xl:px-32 flex w-full mt-10 justify-between">
-      <div className="w-1/2 flex flex-col gap-5">
+      {/* <div className="px-6 lg:px-20 xl:px-32 flex w-full mt-10 justify-between"> */}
+      <div className="w-full grid grid-cols-2 gap-5 px-6 lg:px-20 xl:px-32 mt-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -132,63 +125,16 @@ const workExperience = [
           </Button>
         ))}
       </div>
-      <div className="w-full md:w-5/12">
+      {/* <div className="w-full md:w-5/12">
         <div className="flex w-full flex-col gap-5 p-5 border rounded-lg">
-          <div className="flex gap-2 ">
-            <FaLink className="text-xl" />
-            <h1 className=" text-sm text-gray-400">Connect with me</h1>
-          </div>
+          
 
           <div className="flex flex-col gap-6 mt-5">
-            <Link
-              href="https://github.com/MayankUghade"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <FaGithub className="md:text-3xl text-2xl" />
-              <h1 className="text-sm">Github</h1>
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/mayank-ughade-63aab7229/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <FaLinkedin className="md:text-3xl text-2xl" />
-              <h1 className="text-sm">LinkedIn</h1>
-            </Link>
-            <Link
-              href="https://x.com/MayankUghade3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <FaTwitter className="md:text-3xl text-2xl" />
-              <h1 className="text-sm">Twitter</h1>
-            </Link>
-            <Link
-              href="https://www.instagram.com/mayank_ughade/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <FaInstagram className="md:text-3xl text-2xl" />
-              <h1 className="text-sm">Instagram</h1>
-            </Link>
-            <Link
-              href="mailto:mayank14ughade@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <IoMailOpen className="md:text-3xl text-2xl" />
-              <h1 className="text-sm">Mail</h1>
-            </Link>
+            
+            
           </div>
       </div>
-      </div>
-      </div>
+      </div> */}
     </div>
   );
 }
