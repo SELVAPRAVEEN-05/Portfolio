@@ -4,6 +4,7 @@ import ProjectCard from '@/components/projectCard';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import FoodWeb from '@/components/assets/FoodWeb.png';
+import MovieWeb from '@/components/assets/movieWeb.png';
 
 export default function Projects() {
   const { theme } = useTheme();
@@ -19,9 +20,8 @@ export default function Projects() {
       imageUrl:FoodWeb
     },
     {
-      title: "NewsNugget",
-      description:
-        "NewsNugget, powered by HuggingFace AI, condenses Times of India articles into 60-word summaries for quick and easy updates.",
+      title: "Movie-Watchlist-Web",
+      description:"Movie search and movie app using TMDB API where users can search, filter, sort, watch trailers, and manage a watchlist.",
       tags: [
         "React",
         "Next.js",
@@ -31,8 +31,7 @@ export default function Projects() {
       ],
       githubLink: "https://github.com/SELVAPRAVEEN-05/Movie-Watchlist-Web",
       liveLink: "https://movie-watchlist-web.vercel.app/",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/D4D12AQGVw0sVZ7Kj-g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1673636348357?e=2147483647&v=beta&t=PSpU4mZFpMBmE14oWDnDwf5a8_4rdQUiCUKF_U-x584",
+      imageUrl:MovieWeb
     },
     {
       title: "InsightFul",
