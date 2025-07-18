@@ -2,18 +2,24 @@
 
 import { Button } from "@/components/buttonCard";
 import { Marquee } from "@/components/magicui/marquee";
-import { motion } from "framer-motion";
+import Link from "next/link";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import {
   FaGitAlt,
-  FaReact
+  FaGithub,
+  FaInstagram,
+  FaLink,
+  FaLinkedin,
+  FaReact,
+  FaTwitter
 } from "react-icons/fa6";
 import {
   IoLogoCss3,
   IoLogoHtml5,
   IoLogoJavascript,
   IoLogoNodejs,
-  IoLogoPython
+  IoLogoPython,
+  IoMailOpen,
 } from "react-icons/io5";
 import {
   SiExpress,
@@ -21,7 +27,6 @@ import {
   SiNextdotjs,
   SiTailwindcss
 } from "react-icons/si";
-
 
 const skills = [
   { name: "HTML", icon: <IoLogoHtml5 className="text-4xl" /> },
@@ -62,12 +67,7 @@ const workExperience = [
 ];
 
   return (
-    <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative py-24">
+    <div className="relative py-24">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       <h2 className="text-3xl sm:text-4xl font-serif text-center">
         My <span className="text-purple-600 font-bold">Skills</span>
@@ -88,7 +88,7 @@ const workExperience = [
         </Marquee>
       </div>
       {/* <div className="px-6 lg:px-20 xl:px-32 flex w-full mt-10 justify-between"> */}
-      <div className="w-full grid grid-cols-2 gap-5 px-6 lg:px-20 xl:px-32 mt-10">
+      <div className="w-full px-6 lg:px-20 xl:px-32 mt-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -125,6 +125,16 @@ const workExperience = [
           </Button>
         ))}
       </div>
-    </motion.div>
+      {/* <div className="w-full md:w-5/12">
+        <div className="flex w-full flex-col gap-5 p-5 border rounded-lg">
+          
+
+          <div className="flex flex-col gap-6 mt-5">
+            
+            
+          </div>
+      </div>
+      </div> */}
+    </div>
   );
 }
