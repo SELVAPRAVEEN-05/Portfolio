@@ -3,20 +3,20 @@
 import ProjectCard from '@/components/projectCard';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import FoodWeb from '@/components/assets/FoodWeb.png';
 
 export default function Projects() {
   const { theme } = useTheme();
 
   const projectsData = [
     {
-      title: "Dev-Union",
+      title: "Food Web",
       description:
         "Dev Union is a full-stack app enabling users to create chat rooms and collaborate on projects with real-time video calls and screen-sharing.",
       tags: ["React", "Next.js", "PostgreSQL", "Tailwind", "Prisma"],
-      githubLink: "https://github.com/MayankUghade/Code-Together",
-      liveLink: "https://dev-union.vercel.app/",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/D4D12AQGVw0sVZ7Kj-g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1673636348357?e=2147483647&v=beta&t=PSpU4mZFpMBmE14oWDnDwf5a8_4rdQUiCUKF_U-x584",
+      githubLink: "https://github.com/SELVAPRAVEEN-05/food-web",
+      liveLink: "https://food-web-flax.vercel.app/",
+      imageUrl:FoodWeb
     },
     {
       title: "NewsNugget",
@@ -29,8 +29,8 @@ export default function Projects() {
         "Tailwind",
         "Prisma",
       ],
-      githubLink: "https://github.com/MayankUghade/NewsNugget",
-      liveLink: "https://news-nugget.vercel.app/",
+      githubLink: "https://github.com/SELVAPRAVEEN-05/Movie-Watchlist-Web",
+      liveLink: "https://movie-watchlist-web.vercel.app/",
       imageUrl:
         "https://media.licdn.com/dms/image/v2/D4D12AQGVw0sVZ7Kj-g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1673636348357?e=2147483647&v=beta&t=PSpU4mZFpMBmE14oWDnDwf5a8_4rdQUiCUKF_U-x584",
     },
