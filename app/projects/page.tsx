@@ -5,53 +5,56 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import FoodWeb from '@/components/assets/FoodWeb.png';
 import MovieWeb from '@/components/assets/movieWeb.png';
+import Blogix from '@/components/assets/blogix.png';
+import RP from '@/components/assets/RP.png';
 
 export default function Projects() {
   const { theme } = useTheme();
 
   const projectsData = [
     {
-      title: "Food Web",
-      description:
-        "Dev Union is a full-stack app enabling users to create chat rooms and collaborate on projects with real-time video calls and screen-sharing.",
-      tags: ["React", "Next.js", "PostgreSQL", "Tailwind", "Prisma"],
-      githubLink: "https://github.com/SELVAPRAVEEN-05/food-web",
-      liveLink: "https://food-web-flax.vercel.app/",
-      imageUrl:FoodWeb
-    },
-    {
-      title: "Movie-Watchlist-Web",
+      title: "Movie Web - Movie Search & Watchlist web app",
       description:"Movie search and movie app using TMDB API where users can search, filter, sort, watch trailers, and manage a watchlist.",
       tags: [
         "React",
         "Next.js",
-        "PostgreSQL",
+        "Hero UI",
         "Tailwind",
-        "Prisma",
+        "TMDB API",
+        "Vercel",
+        "TypeScript",
+        "Framer Motion",
       ],
       githubLink: "https://github.com/SELVAPRAVEEN-05/Movie-Watchlist-Web",
       liveLink: "https://movie-watchlist-web.vercel.app/",
       imageUrl:MovieWeb
     },
     {
-      title: "InsightFul",
+      title: "Blogix - AI-Powered Blogging Platform",
       description:
         "InsightFul is a fullstack tool that helps saas developers collect valuable user feedback and insights to improve your product and delight your customers.",
-      tags: ["React", "Next.js", "Tailwind", "Next-Auth", "Mongo DB", "Vercel"],
+      tags: ["React", "Next.js", "Tailwind", " PostgreSQL","Vector Db", "Typescript", "Vercel", "Prisma"],
       githubLink: "https://github.com/MayankUghade/InsightFul",
       liveLink: "https://insightful-two.vercel.app/",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/D4D12AQGVw0sVZ7Kj-g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1673636348357?e=2147483647&v=beta&t=PSpU4mZFpMBmE14oWDnDwf5a8_4rdQUiCUKF_U-x584",
+      imageUrl:Blogix
     },
     {
-      title: "Epic-Energize",
+      title: "Food Web - Food Delivery Web App",
       description:
-        "Epic-Energize is a fitness app with a comprehensive exercise database and RapidAPI integration, providing structured workouts.",
-      tags: ["React", "Tailwind", "RapidAPI","Node", "Vercel"],
+        "A food delivery web app that allows users to Book a table and order food online for birthday parties, weddings, and other events.",
+      tags: ["React", "Next.js", "Hero UI", "Tailwind", "MUI", "Vercel", "TypeScript"],
+      githubLink: "https://github.com/SELVAPRAVEEN-05/food-web",
+      liveLink: "https://food-web-flax.vercel.app/",
+      imageUrl:FoodWeb
+    },
+    
+    {
+      title: "Event Manager - Event Booking & Points System",
+      description:"Developed an event management app to replace Google Forms, boosting student participation by 30%",
+      tags: ["React", "vite", "MUI","Node", "MySQL", "Express", "Axios", "Tailwind","Figma"],
       githubLink: "https://github.com/MayankUghade/Epic-Energize",
       liveLink: "https://epic-energize.vercel.app/",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/D4D12AQGVw0sVZ7Kj-g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1673636348357?e=2147483647&v=beta&t=PSpU4mZFpMBmE14oWDnDwf5a8_4rdQUiCUKF_U-x584",
+      imageUrl:RP
     },
   ];
 

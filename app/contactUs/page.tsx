@@ -88,7 +88,7 @@ export default function ContactUs() {
               />
               <SocialButton
                 label="Whatsapp"
-                link="https://wa.me/+911234567890"
+                link="https://wa.me/+919025174530"
                 icon={<FaWhatsapp className="mr-2" />}
                 color="bg-gradient-to-r from-green-600 to-green-800 dark:from-emerald-400 dark:to-emerald-600 mt-6"
               />
