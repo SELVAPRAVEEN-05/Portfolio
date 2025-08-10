@@ -50,7 +50,7 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.8, ease: "easeOut" }}>
-              Hi, I am <span className="text-purple-500 font-semibold">SELVAPRAVEEN S</span>, a 20-year-old Full Stack Web Developer and
+              Hi, I am <span className="text-purple-500 font-semibold">SELVAPRAVEEN S</span>, a 21-year-old Full Stack Web Developer and
               third-year <span className="font-medium">B.E. CSE</span> student at Bannari Amman Institute of Technology.<span className="hidden xl:inline"> I'm from Tiruppur and passionate about building modern, user-friendly web applications.</span>
             </motion.div>
 
