@@ -3,9 +3,11 @@
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { FaPhone, FaWhatsapp, FaEnvelope } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import animationData from "@/components/assets/cantact.json";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -29,14 +31,36 @@ export default function ContactUs() {
   return (
     <div className="relative min-h-screen w-full py-16 flex flex-col">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
-      <h2 className="text-3xl sm:text-4xl font-serif text-center">
-        Let's <span className="text-purple-600 font-bold">Connect</span>
-      </h2>
+      <div className="flex gap-2 justify-center">
+        <TextAnimate
+          animation="slideLeft"
+          by="character"
+          className="text-3xl sm:text-4xl font-serif"
+          delay={0.1}
+          duration={0.6}
+        >
+          Let's
+        </TextAnimate>
+        <TextAnimate
+          animation="slideLeft"
+          by="character"
+          className="text-3xl sm:text-4xl font-serif text-purple-600 font-bold"
+          delay={0.6}
+          duration={0.6}
+        >
+          Connect
+        </TextAnimate>
+      </div>
       <div className="w-full flex justify-end">
         <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       </div>
-
-      <div className="w-full flex flex-col px-6 lg:px-16 xl:px-32 lg:flex-row items-center justify-between gap-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.9, ease: "easeOut", delay: 0.8 }}
+        className="w-full flex flex-col px-6 lg:px-16 xl:px-32 lg:flex-row items-center justify-between gap-12"
+      >
         <div className="relative w-full md:w-3/5 lg:w-2/5">
           <Lottie animationData={animationData} loop={true} />
         </div>
@@ -101,7 +125,7 @@ export default function ContactUs() {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

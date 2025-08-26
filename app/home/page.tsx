@@ -89,13 +89,13 @@ export default function Home() {
     <>
       <Script src="/particles.min.js" strategy="beforeInteractive" />
       <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-    >
-      <div className="min-h-screen relative bg-gray-100 dark:bg-transparent">
-        <div id="particles-js" className="absolute inset-0 z-0" />
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      >
+        <div className="min-h-screen relative bg-gray-100 dark:bg-transparent">
+          <div id="particles-js" className="absolute inset-0 z-0" />
           <div className="px-7 md:px-7 lg:px-20 xl:px-32 py-20 sm:py-24 md:py-40">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between">
               {/* Text Section */}
@@ -123,8 +123,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
     </>
   );
 }

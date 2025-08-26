@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/buttonCard";
 import { Marquee } from "@/components/magicui/marquee";
+import { TextAnimate } from "@/components/magicui/text-animate";
 import Link from "next/link";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import {
@@ -69,12 +70,31 @@ const workExperience = [
   return (
     <div className="relative py-24">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
-      <h2 className="text-3xl sm:text-4xl font-serif text-center">
-        My <span className="text-purple-600 font-bold">Skills</span>
-      </h2>
+      
+      <div className="flex gap-2 justify-center">
+        <TextAnimate
+          animation="slideLeft"
+          by="character"
+          className="text-3xl sm:text-4xl font-serif"
+          delay={0.1}
+          duration={0.2}
+        >
+          My
+        </TextAnimate>
+        <TextAnimate
+          animation="slideLeft"
+          by="character"
+          className="text-3xl sm:text-4xl font-serif text-purple-600 font-bold"
+          delay={0.4}
+          duration={0.6}
+        >
+          Skills
+        </TextAnimate>
+      </div>
       <div className="w-full flex justify-end">
         <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       </div>
+      
         <div className="pt-10 px-6 lg:px-20 xl:px-32 w-full">
         <Marquee pauseOnHover className="[--duration:20s] w-full">
           {firstRow.map((skill) => (
@@ -125,16 +145,6 @@ const workExperience = [
           </Button>
         ))}
       </div>
-      {/* <div className="w-full md:w-5/12">
-        <div className="flex w-full flex-col gap-5 p-5 border rounded-lg">
-          
-
-          <div className="flex flex-col gap-6 mt-5">
-            
-            
-          </div>
-      </div>
-      </div> */}
     </div>
   );
 }

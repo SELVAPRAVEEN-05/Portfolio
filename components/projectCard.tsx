@@ -19,7 +19,7 @@ export default function ProjectCard({ data }: any) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
-      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
     >
       <Card className="rounded-lg overflow-hidden shadow-lg flex flex-col">
         <div className="relative h-[13rem] md:h-[16rem]">
@@ -35,17 +35,25 @@ export default function ProjectCard({ data }: any) {
 
         <CardContent className="p-6 space-y-4 flex flex-col flex-grow justify-between">
           <div>
-            <CardTitle className="text-[18px] lg:text-xl xl:text-2xl font-semibold">{data.title}</CardTitle>
+            <CardTitle className="text-[18px] lg:text-xl xl:text-2xl font-semibold">
+              {data.title}
+            </CardTitle>
             <CardDescription className="text-sm xl:text-[16px] mt-2">
               {data.description}
             </CardDescription>
           </div>
 
           <div className="space-y-4">
-            <div className="lg:text-sm xl:text-[16px] font-medium">Technologies Used:</div>
+            <div className="lg:text-sm xl:text-[16px] font-medium">
+              Technologies Used:
+            </div>
             <div className="flex flex-wrap md:flex-nowrap gap-3 w-full md:overflow-x-scroll md:scrollbar-hide">
               {data.tags.map((tag: any) => (
-                <Badge key={tag} variant="outline" className="text-xs lg:text-sm xl:text-[16px] md:whitespace-nowrap">
+                <Badge
+                  key={tag}
+                  variant="outline"
+                  className="text-xs lg:text-sm xl:text-[16px] md:whitespace-nowrap"
+                >
                   {tag}
                 </Badge>
               ))}
