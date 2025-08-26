@@ -1,83 +1,70 @@
 "use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaGithub, FaLink, FaLinkedin, FaTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLink, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import { ImPhone } from "react-icons/im";
-import { IoMailOpen } from 'react-icons/io5';
+import { IoMailOpen } from "react-icons/io5";
 import { MdMarkEmailUnread } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <div className=" py-8 px-6 xl:px-32 bg-gray-100 dark:bg-slate-900 dark:text-gray-300">
-      <div className='flex justify-between'>
+    <div className="py-8 px-6 xl:px-32 bg-gray-100 dark:bg-slate-900 dark:text-gray-300">
+      {/* Grid wrapper for responsiveness */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Left Section */}
         <div>
           <div className="gap-3 ml-[-7px]">
-            <Link className="flex justify-start items-center gap-1 mb-4" href="/">
-              <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={40}
-                height={40} />
+            <Link
+              className="flex justify-start items-center gap-1 mb-4"
+              href="/"
+            >
+              <Image src="/images/logo.png" alt="Logo" width={40} height={40} />
               <p className="font-bold text-inherit">PortFolio</p>
             </Link>
-            <p className='py-2 mb-2'>Thanks for visiting my Portfolio ❤️</p>
+            <p className="py-2 mb-2">Thanks for visiting my Portfolio ❤️</p>
           </div>
           <div className="flex gap-2 py-1 items-center">
             <ImPhone className="text-lg" />
-            <h1 className=" text-gray-400 ">Phone :</h1>
+            <h1 className="text-gray-400">Phone :</h1>
           </div>
-          <div className='mb-6'>+919025174530</div>
+          <div className="mb-6">+919025174530</div>
           <div className="flex gap-2 py-1 items-center">
             <MdMarkEmailUnread className="text-xl" />
-            <h1 className=" text-gray-400 ">E-mail :</h1>
+            <h1 className="text-gray-400">E-mail :</h1>
           </div>
           <div>selvapraveen2005@gmail.com</div>
         </div>
-        <div>
-          <div className="flex gap-2 pb-4">
+
+        {/* Middle Section */}
+        <div className="hidden md:block">
+          <div className="flex gap-2 pb-4 ">
             <FaLink className="text-xl" />
-            <h1 className=" text-sm text-gray-400 ">Quick Links</h1>
+            <h1 className="text-sm text-gray-400">Quick Links</h1>
           </div>
           <div className="flex flex-col gap-5">
-            <button
-              onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-left text-sm hover:text-purple-400 transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-left text-sm hover:text-purple-400 transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-left text-sm hover:text-purple-400 transition-colors"
-            >
-              Skills
-            </button>
-            <button
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-left text-sm hover:text-purple-400 transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="text-left text-sm hover:text-purple-400 transition-colors"
-            >
-              Contact
-            </button>
+            {["home", "about", "skills", "projects", "contact"].map((id) => (
+              <button
+                key={id}
+                onClick={() =>
+                  document
+                    .getElementById(id)
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-left text-sm hover:text-purple-400 transition-colors"
+              >
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </button>
+            ))}
           </div>
-
         </div>
+
+        {/* Right Section */}
         <div>
           <div className="flex gap-2 pb-4">
             <FaLink className="text-xl" />
-            <h1 className=" text-sm text-gray-400 ">Connect with me</h1>
+            <h1 className="text-sm text-gray-400">Connect with me</h1>
           </div>
           <div className="flex flex-col gap-4">
             <Link
@@ -111,7 +98,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              href="https://www.instagram.com/selva_praveen05?igsh=MXB4YjVvcmhodDh4cg=="
+              href="https://www.instagram.com/selva_praveen05"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
@@ -130,11 +117,12 @@ export default function Footer() {
               <h1 className="text-sm">Mail</h1>
             </Link>
           </div>
-
         </div>
       </div>
+
+      {/* Bottom Bar */}
       <div className="text-center text-xs lg:text-sm text-neutral-500 mt-10 flex flex-col md:flex-row items-center justify-center gap-2">
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap justify-center">
           <p>Designed & Developed by</p>
           <p>
             <a
@@ -151,5 +139,5 @@ export default function Footer() {
         <span>© selvapraveen2005@gmail.com</span>
       </div>
     </div>
-  )
+  );
 }

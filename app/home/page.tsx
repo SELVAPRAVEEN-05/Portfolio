@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import Script from "next/script";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 declare global {
   interface Window {
@@ -99,17 +100,47 @@ export default function Home() {
           <div className="px-7 md:px-7 lg:px-20 xl:px-32 py-20 sm:py-24 md:py-40">
             <div className="flex flex-col-reverse md:flex-row items-center justify-between">
               {/* Text Section */}
-              <div className="w-full md:w-7/12 text-center md:text-left">
-                <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-                  Hi There!
-                  <span className="wave ml-2" role="img" aria-label="wave">
+              <div className="w-full md:w-7/12 flex flex-col items-center md:items-start md:text-left">
+                <div className="flex gap-2 mt-7">
+                  <TextAnimate
+                    animation="slideLeft"
+                    by="character"
+                    className="text-3xl sm:text-4xl font-bold mb-4 "
+                    delay={0.1}
+                    duration={0.6}
+                  >
+                    Hi There!
+                  </TextAnimate>
+                  <TextAnimate
+                    animation="slideLeft"
+                    by="word"
+                    className="wave text-3xl sm:text-4xl font-bold"
+                    delay={0.7}
+                    duration={0.6}
+                  >
                     👋🏻
-                  </span>
-                </h1>
-                <h1 className="text-2xl sm:text-3xl font-semibold">
-                  I'M
-                  <strong className="text-primary ml-2">SELVAPRAVEEN S</strong>
-                </h1>
+                  </TextAnimate>
+                </div>
+                <div className="flex gap-2">
+                  <TextAnimate
+                    animation="slideLeft"
+                    by="character"
+                    className="text-2xl sm:text-3xl font-semibold"
+                    delay={0.1}
+                    duration={0.6}
+                  >
+                    I'M
+                  </TextAnimate>
+                  <TextAnimate
+                    animation="slideLeft"
+                    by="character"
+                    className="text-2xl sm:text-3xl font-semibold text-primary"
+                    delay={0.7}
+                    duration={0.6}
+                  >
+                    SELVAPRAVEEN S
+                  </TextAnimate>
+                </div>
                 <div className="mt-6 sm:mt-8">
                   <Type />
                 </div>

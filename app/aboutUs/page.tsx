@@ -9,7 +9,7 @@ export default function AboutUs() {
     <div className="min-h-screen w-full py-24">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       {/* Heading */}
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-center ">
         <TextAnimate
           animation="slideLeft"
           by="character"
@@ -64,7 +64,7 @@ export default function AboutUs() {
             <span className="text-purple-500 font-semibold">
               SELVAPRAVEEN S
             </span>
-            , a 21-year-old Full Stack Web Developer and third-year{" "}
+            , a 20-year-old Full Stack Web Developer and third-year{" "}
             <span className="font-medium">B.E. CSE</span> student at Bannari
             Amman Institute of Technology.
             <span className="hidden xl:inline">
@@ -84,11 +84,8 @@ export default function AboutUs() {
             I work mainly with the{" "}
             <span className="text-green-400 font-medium">MERN STACK</span> to
             create responsive websites and full-stack clones.
-            <span className="hidden md:inline">
-              {" "}
               I'm always exploring new technologies to improve my skills and
               enjoy bringing creative ideas to life through code.
-            </span>
           </motion.div>
 
           <motion.div
@@ -99,7 +96,8 @@ export default function AboutUs() {
             className="mt-6"
           >
             Beyond coding, I love playing{" "}
-            <span className="text-yellow-400 font-semibold">CHESS</span>,
+            <span className="text-yellow-400 font-semibold">CHESS</span>
+            <span className="md:hidden">. which sharpens my strategic thinking and problem-solving.</span>
             <span className="hidden md:inline">
               {" "}
               which sharpens my strategic thinking and problem-solving. I'm

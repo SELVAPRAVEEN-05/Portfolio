@@ -91,7 +91,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen py-20 w-full flex flex-col justify-center">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
-      <div className="flex gap-2 justify-center">
+      <div className="flex flex-col text-center sm:flex-row gap-2 justify-center ">
         <TextAnimate
           animation="slideLeft"
           by="character"

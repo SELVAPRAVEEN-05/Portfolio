@@ -60,10 +60,10 @@ export default function Skills() {
 const workExperience = [
   {
     id: 1,
-    title: "Frontend Developer - Crayond",
-    desc: "I completed a one-year internship at Crayond, where I built fully responsive websites using Next.js, Tailwind CSS, and HeroUI. During my internship, I contributed to multiple projects, including Fynro, a finance management platform, and Revature, an educational website.",
+    title: "Full-Stack Developer",
+    desc: "I completed a one-year internship at crayond digital pvt. ltd, where I built fully responsive websites using Next.js, Tailwind CSS, and HeroUI. During my internship, I contributed to multiple projects, including Fynro, a finance management platform, and Revature, an educational website.",
     className: "md:col-span-2",
-    thumbnail: "https://www.shutterstock.com/image-vector/logo-design-houses-residences-villages-260nw-2462964785.jpg",
+    thumbnail: "https://rest.techbehemoths.com/storage/images/companies/55082/d0f1b05aa505dfada5b18c75ea12a84d.png",
   },
 ];
 
@@ -128,11 +128,14 @@ const workExperience = [
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
+              <div className="flex gap-2 md:flex-col items-center text-lg">
+                <img
                 src={card.thumbnail}
                 alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16"
+                className="lg:w-12 md:w-20 w-10"
               />
+              <span className="font-crayon">crayon'd</span>
+              </div>
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {card.title}
