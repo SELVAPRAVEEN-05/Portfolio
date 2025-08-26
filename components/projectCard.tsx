@@ -19,7 +19,7 @@ export default function ProjectCard({ data }: any) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
     >
       <Card className="rounded-lg overflow-hidden shadow-lg flex flex-col">
         <div className="relative h-[13rem] md:h-[16rem]">
