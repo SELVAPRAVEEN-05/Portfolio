@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import animationData from "@/components/assets/cantact.json";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { Button } from "@/components/buttonCard";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="relative min-h-screen w-full py-16 flex flex-col">
+    <div className="relative min-h-screen w-svw py-16 flex flex-col">
       <div className="bg-primary h-[1px] w-3/5 my-7"></div>
       <div className="flex gap-2 justify-center">
         <TextAnimate
@@ -64,9 +65,18 @@ export default function ContactUs() {
         <div className="relative w-full md:w-3/5 lg:w-2/5">
           <Lottie animationData={animationData} loop={true} />
         </div>
-
-        <div className="w-full xl:w-2/5 lg:w-1/2 border border-slate-300 dark:border-slate-700 p-6 rounded-md shadow-lg backdrop-blur-lg bg-white/20 dark:bg-black/20">
-          <form onSubmit={handleSubmit}>
+        <Button
+          as="div"
+          duration={Math.floor(Math.random() * 10000) + 10000}
+          borderRadius="1.75rem"
+          style={{
+            background: "rgb(4,7,29)",
+            backgroundColor: "transparent",
+            borderRadius: `calc(1.75rem* 0.96)`,
+          }}
+          className="text-black dark:text-white border-neutral-200 dark:border-slate-800 p-6  bg-white/20 dark:bg-black/20 xl:w-[30rem] lg:w-[24rem] md:w-[45rem] w-[24rem] shadow-lg backdrop-blur-md border"
+        >
+          <form onSubmit={handleSubmit} className="w-full">
             <InputField
               label="Name"
               id="name"
@@ -75,6 +85,7 @@ export default function ContactUs() {
               value={formData.name}
               onChange={handleChange}
             />
+
             <InputField
               label="Email Address"
               id="email"
@@ -83,6 +94,7 @@ export default function ContactUs() {
               value={formData.email}
               onChange={handleChange}
             />
+
             <div className="flex flex-col mb-4 space-y-2">
               <label htmlFor="message" className="text-sm font-medium">
                 Message
@@ -96,6 +108,8 @@ export default function ContactUs() {
                 required
               />
             </div>
+
+            {/* ✅ now safe inside form */}
             <button
               type="submit"
               className="w-full h-10 bg-blue-900 text-white font-semibold rounded-md hover:brightness-110 transition"
@@ -124,7 +138,7 @@ export default function ContactUs() {
               />
             </div>
           </form>
-        </div>
+        </Button>
       </motion.div>
     </div>
   );

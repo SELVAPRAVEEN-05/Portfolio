@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div className="py-8 px-6 xl:px-32 bg-gray-100 dark:bg-slate-900 dark:text-gray-300">
       {/* Grid wrapper for responsiveness */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:flex justify-between gap-10 ">
         {/* Left Section */}
         <div>
           <div className="gap-3 ml-[-7px]">
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Section */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="flex gap-2 pb-4 ">
             <FaLink className="text-xl" />
             <h1 className="text-sm text-gray-400">Quick Links</h1>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section */}
-        <div>
+        <div className="pr-20">
           <div className="flex gap-2 pb-4">
             <FaLink className="text-xl" />
             <h1 className="text-sm text-gray-400">Connect with me</h1>
