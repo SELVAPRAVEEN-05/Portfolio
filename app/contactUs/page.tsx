@@ -120,7 +120,7 @@ export default function ContactUs() {
             <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between">
               <SocialButton
                 label="Phone"
-                link="tel:+91234567890"
+                link="tel:+919025174530"
                 icon={<FaPhone className="mr-2" />}
                 color="bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 mt-6"
               />
