@@ -1,6 +1,5 @@
 "use client";
 
-import { Logo } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import {
   Navbar as HeroUINavbar,
@@ -12,10 +11,9 @@ import {
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
-import NextLink from "next/link";
-import { useEffect, useState, useRef } from "react";
-import { ThemeSwitch } from "./theme-switch";
 import Image from "next/image";
+import NextLink from "next/link";
+import { useEffect, useRef, useState } from "react";
 import ThemeToggleButton from "./ui/theme-toggle-button";
 
 export const Navbar = () => {

@@ -41,7 +41,7 @@ export default function AboutUs() {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           className="w-full md:w-2/5 lg:w-1/4 h-80 sm:h-96 md:h-80 lg:h-96  overflow-hidden shadow-lg flex items-center justify-center"
         >
           <Image
@@ -58,7 +58,7 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
           >
             Hi, I am{" "}
             <span className="text-purple-500 font-semibold">
@@ -78,26 +78,28 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             className="mt-6"
           >
             I work mainly with the{" "}
             <span className="text-green-400 font-medium">MERN STACK</span> to
-            create responsive websites and full-stack clones.
-              I'm always exploring new technologies to improve my skills and
-              enjoy bringing creative ideas to life through code.
+            create responsive websites and full-stack clones. I'm always
+            exploring new technologies to improve my skills and enjoy bringing
+            creative ideas to life through code.
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
             className="mt-6"
           >
             Beyond coding, I love playing{" "}
             <span className="text-yellow-400 font-semibold">CHESS</span>
-            <span className="md:hidden">. which sharpens my strategic thinking and problem-solving.</span>
+            <span className="md:hidden">
+              . which sharpens my strategic thinking and problem-solving.
+            </span>
             <span className="hidden md:inline">
               {" "}
               which sharpens my strategic thinking and problem-solving. I'm

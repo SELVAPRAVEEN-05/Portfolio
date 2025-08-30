@@ -107,10 +107,10 @@ export default function Skills() {
       {/* <div className="px-6 lg:px-20 xl:px-32 flex w-full mt-10 justify-between"> */}
 
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
       >
         <div className="w-full px-6 lg:px-20 xl:px-32 mt-10">
           {workExperience.map((card) => (

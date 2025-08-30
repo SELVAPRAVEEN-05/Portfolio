@@ -16,10 +16,10 @@ import { motion } from "framer-motion";
 export default function ProjectCard({ data }: any) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+      transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
     >
       <Card className="rounded-lg overflow-hidden shadow-lg flex flex-col">
         <div className="relative h-[13rem] md:h-[16rem]">
