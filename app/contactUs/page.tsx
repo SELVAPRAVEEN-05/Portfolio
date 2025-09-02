@@ -1,14 +1,14 @@
 "use client";
 
+import animationData from "@/components/assets/cantact.json";
+import { Button } from "@/components/buttonCard";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
-import { FaPhone, FaWhatsapp, FaEnvelope } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa6";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import animationData from "@/components/assets/cantact.json";
-import { TextAnimate } from "@/components/magicui/text-animate";
-import { Button } from "@/components/buttonCard";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({

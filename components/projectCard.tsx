@@ -1,17 +1,17 @@
 "use client";
 
+import { Badge } from "@/components/magicui/badge";
 import {
   Card,
   CardContent,
-  CardTitle,
   CardDescription,
+  CardTitle,
 } from "@/components/magicui/card";
-import { Badge } from "@/components/magicui/badge";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { GrGlobe } from "react-icons/gr";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function ProjectCard({ data }: any) {
   return (

@@ -1,12 +1,12 @@
 "use client";
-import Lottie from "lottie-react";
-import animationData from "../../public/animations/laptop.json";
+import { TextAnimate } from "@/components/magicui/text-animate";
 import Type from "@/components/type";
+import { motion } from "framer-motion";
+import Lottie from "lottie-react";
 import { useTheme } from "next-themes";
 import Script from "next/script";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
-import { TextAnimate } from "@/components/magicui/text-animate";
+import animationData from "../../public/animations/laptop.json";
 
 declare global {
   interface Window {

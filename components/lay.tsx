@@ -3,13 +3,13 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-import { Particles } from "@/components/magicui/particles";
-import Skills from "@/app/skills/page";
 import AboutUs from "@/app/aboutUs/page";
-import Projects from "@/app/projects/page";
 import ContactUs from "@/app/contactUs/page";
-import Home from "@/app/home/page";
 import Footer from "@/app/footer/page";
+import Home from "@/app/home/page";
+import Projects from "@/app/projects/page";
+import Skills from "@/app/skills/page";
+import { Particles } from "@/components/magicui/particles";
 
 export default function LayoutPage() {
   const { resolvedTheme } = useTheme();
@@ -21,12 +21,24 @@ export default function LayoutPage() {
 
   return (
     <div className="relative overflow-hidden bg-background">
-      <section id="home"><Home /></section> 
-      <section id="about"><AboutUs /></section>
-      <section id="skills"><Skills /></section>
-      <section id="projects"><Projects /></section>
-      <section id="contact"><ContactUs /></section>
-      <section id="footer"><Footer /></section>
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <AboutUs />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contact">
+        <ContactUs />
+      </section>
+      <section id="footer">
+        <Footer />
+      </section>
       <Particles
         className="absolute inset-0 z-0"
         quantity={100}

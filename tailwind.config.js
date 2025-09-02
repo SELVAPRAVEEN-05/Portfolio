@@ -8,7 +8,7 @@ const config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
-   safelist: [
+  safelist: [
     "animate-marquee",
     "animate-marquee-vertical",
     "group-hover:[animation-play-state:paused]",

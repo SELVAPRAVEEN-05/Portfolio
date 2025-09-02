@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
 import Photo from "@/components/assets/photo.jpg";
-import { motion } from "framer-motion";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
