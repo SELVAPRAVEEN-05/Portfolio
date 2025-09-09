@@ -24,10 +24,9 @@ export default function ProjectCard({ data }: any) {
       <Card className="rounded-lg overflow-hidden shadow-lg flex flex-col">
         <div className="relative h-[13rem] md:h-[16rem]">
           <Image
-            src={data.imageUrl || "/fallback.png"}
+            src={data.imageUrl}
             alt={`${data.title} thumbnail`}
             fill
-            className="object-cover"
             placeholder="blur"
             blurDataURL="/blur-placeholder.png"
           />

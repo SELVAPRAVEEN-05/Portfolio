@@ -3,7 +3,7 @@
 import Blogix from "@/components/assets/blogix.png";
 import FoodWeb from "@/components/assets/FoodWeb.png";
 import MovieWeb from "@/components/assets/movieWeb.png";
-import RP from "@/components/assets/RP.png";
+import RP from "@/components/assets/codemeet.png";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import ProjectCard from "@/components/projectCard";
 import Link from "next/link";
@@ -11,6 +11,25 @@ import Link from "next/link";
 export default function Projects() {
 
   const projectsData = [
+    {
+      title: "Code Meet - A Real Time Coding Interview Platform ",
+      description:
+        "A real-time coding interview platform with role-based access for Admin, Interviewer, and Candidate with scheduling, coding tests, and result .",
+      tags: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "vercel",
+        "Redis",
+        "Figma",
+      ],
+      githubLink: "https://github.com/SELVAPRAVEEN-05/The-Interviewer",
+      liveLink: "https://the-codemeet.vercel.app/",
+      imageUrl: RP,
+    },
     {
       title: "Movie Web - Movie Search & Watchlist web app",
       description:
@@ -64,25 +83,6 @@ export default function Projects() {
       liveLink: "https://food-web-flax.vercel.app/",
       imageUrl: FoodWeb,
     },
-    {
-      title: "Event Manager - Event Booking & Points System",
-      description:
-        "Developed an event management app to replace Google Forms, boosting student participation by 30%",
-      tags: [
-        "React",
-        "vite",
-        "MUI",
-        "Node",
-        "MySQL",
-        "Express",
-        "Axios",
-        "Tailwind",
-        "Figma",
-      ],
-      githubLink: "https://github.com/Sivabalan-19/Reward_points",
-      liveLink: "https://github.com/Navani001/rp_backend",
-      imageUrl: RP,
-    },
   ];
 
   return (
@@ -119,7 +119,7 @@ export default function Projects() {
       </div>
 
       <button className="mt-8 underline text-sm text-purple-500 hover:text-purple-600 transition">
-        <Link href={"https://github.com"}>More Projects</Link>
+        <Link href={"https://github.com/SELVAPRAVEEN-05/"}>More Projects</Link>
       </button>
     </div>
   );
