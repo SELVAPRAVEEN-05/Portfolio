@@ -6,11 +6,9 @@ import MovieWeb from "@/components/assets/movieWeb.png";
 import RP from "@/components/assets/RP.png";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import ProjectCard from "@/components/projectCard";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 
 export default function Projects() {
-  const { theme } = useTheme();
 
   const projectsData = [
     {
@@ -45,8 +43,8 @@ export default function Projects() {
         "Vercel",
         "Prisma",
       ],
-      githubLink: "https://github.com/MayankUghade/InsightFul",
-      liveLink: "https://insightful-two.vercel.app/",
+      githubLink: "https://github.com/Navani001/blogger",
+      liveLink: "https://www.blogix.tech/",
       imageUrl: Blogix,
     },
     {
@@ -66,7 +64,6 @@ export default function Projects() {
       liveLink: "https://food-web-flax.vercel.app/",
       imageUrl: FoodWeb,
     },
-
     {
       title: "Event Manager - Event Booking & Points System",
       description:
@@ -82,8 +79,8 @@ export default function Projects() {
         "Tailwind",
         "Figma",
       ],
-      githubLink: "https://github.com/MayankUghade/Epic-Energize",
-      liveLink: "https://epic-energize.vercel.app/",
+      githubLink: "https://github.com/Sivabalan-19/Reward_points",
+      liveLink: "https://github.com/Navani001/rp_backend",
       imageUrl: RP,
     },
   ];
