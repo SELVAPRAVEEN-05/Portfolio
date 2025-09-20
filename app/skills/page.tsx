@@ -1,12 +1,15 @@
 "use client";
 
 import { Button } from "@/components/buttonCard";
-import { Marquee } from "@/components/magicui/marquee";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { motion } from "framer-motion";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { FaGitAlt, FaReact } from "react-icons/fa6";
-import { motion } from "framer-motion";
 
+import {
+  ScrollVelocityContainer,
+  ScrollVelocityRow,
+} from "@/components/ui/scroll-based-velocity";
 import {
   IoLogoCss3,
   IoLogoHtml5,
@@ -38,7 +41,7 @@ const skills = [
 ];
 
 const ReviewCard = ({ icon, name }: { icon: any; name: string }) => (
-  <figure className="flex items-center gap-2 p-2 rounded-xl border bg-white/5 hover:bg-white/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
+  <figure className="flex mx-2 items-center gap-2 p-2 rounded-xl border bg-white/5 hover:bg-white/10 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
     {icon}
     <span>{name}</span>
   </figure>
@@ -91,7 +94,7 @@ export default function Skills() {
         viewport={{ once: false }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
       >
-        <div className="pt-10 px-6 lg:px-20 xl:px-32 w-full">
+        {/* <div className="pt-10 px-6 lg:px-20 xl:px-32 w-full">
           <Marquee pauseOnHover className="[--duration:20s] w-full">
             {firstRow.map((skill) => (
               <ReviewCard key={skill.name} {...skill} />
@@ -102,6 +105,20 @@ export default function Skills() {
               <ReviewCard key={skill.name} {...skill} />
             ))}
           </Marquee>
+        </div> */}
+        <div className="pt-10 px-6 lg:px-20 xl:px-32 w-full">
+        <ScrollVelocityContainer className="space-y-5">
+          <ScrollVelocityRow baseVelocity={5} direction={1}>
+            {firstRow.map((skill) => (
+              <ReviewCard key={skill.name} {...skill} />
+            ))}
+          </ScrollVelocityRow>
+          <ScrollVelocityRow baseVelocity={5} direction={-1}>
+            {secondRow.map((skill) => (
+              <ReviewCard key={skill.name} {...skill} />
+            ))}
+          </ScrollVelocityRow>
+        </ScrollVelocityContainer>
         </div>
       </motion.div>
       {/* <div className="px-6 lg:px-20 xl:px-32 flex w-full mt-10 justify-between"> */}
