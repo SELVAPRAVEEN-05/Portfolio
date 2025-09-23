@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/buttonCard";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Type from "@/components/type";
 import { motion } from "framer-motion";
@@ -141,9 +142,21 @@ export default function Home() {
                   SELVAPRAVEEN S
                 </TextAnimate>
               </div>
-              <div className="mt-6 sm:mt-8">
+              <div className="my-6 sm:my-8">
                 <Type />
               </div>
+              <a
+                href="/SELVAPRAVEEN_S_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  borderRadius="10px"
+                  className="px-6 py-2 text-xl font-semibold dark:text-white text-black border-2 border-primary"
+                >
+                  My Resume
+                </Button>
+              </a>
             </motion.div>
 
             {/* Lottie Animation Section */}

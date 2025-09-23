@@ -1,53 +1,62 @@
-# Next.js & HeroUI Template
+# Selva Praveen Portfolio
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+![Portfolio Screenshot](./screenshot.png)
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+[![Website](https://img.shields.io/badge/Portfolio-Online-brightgreen)](https://selva-33.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-blue?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-blue?logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/FramerMotion-3.13-purple?logo=framer)](https://www.framer.com/motion/)
+[![HeroUI](https://img.shields.io/badge/HeroUI-v2-orange)](https://heroui.com/)
+[![Tailwind Variants](https://img.shields.io/badge/TailwindVariants-1.0-pink)](https://tailwind-variants.org)
+[![Next Themes](https://img.shields.io/badge/NextThemes-1.2-blueviolet)](https://github.com/pacocoursey/next-themes)
 
-## Technologies Used
+A modern, responsive portfolio showcasing my projects, skills, and contact information.
 
+## 🌐 Live Demo
+[https://selva-33.vercel.app/](https://selva-33.vercel.app/)
+
+## 🛠️ Technologies Used
 - [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
+- [HeroUI v2](https://heroui.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
-## How to Use
+## 📑 Sections
+- **Home** – Introduction and overview  
+- **About Me** – Personal background and interests  
+- **Projects** – Highlights of my development projects  
+- **Skills** – My technical skills and expertise  
+- **Contact Me** – LinkedIn, GitHub, Email  
 
-### Use the template with create-next-app
+## 📂 Features
+- Fully responsive design for all devices  
+- Smooth scrolling navigation  
+- Interactive project showcase  
+- Light/Dark theme toggle (via `next-themes`)  
+- Contact form integrated with direct email links  
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## 🔗 Contact & Socials
+- **LinkedIn:** [Selva Praveen](https://www.linkedin.com/in/selvapraveen-s/)  
+- **GitHub:** [Selva-33](https://github.com/Selva-33)  
+- **Email:** selvapraveen@example.com  
+
+## 🚀 Getting Started
+To run this portfolio locally:
 
 ```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
+# Clone the repository
+git clone https://github.com/Selva-33/portfolio.git
 
-### Install dependencies
+# Navigate into the project directory
+cd portfolio
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
+# Install dependencies
 npm install
-```
 
-### Run the development server
-
-```bash
+# Start the development server
 npm run dev
-```
 
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
