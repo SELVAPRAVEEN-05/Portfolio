@@ -1,6 +1,6 @@
 # Selva Praveen Portfolio
 
-![Portfolio Screenshot](./screenshot.png)
+![Portfolio Screenshot](./public/screenshot.png)
 
 [![Website](https://img.shields.io/badge/Portfolio-Online-brightgreen)](https://selva-33.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-14-blue?logo=next.js)](https://nextjs.org/)
