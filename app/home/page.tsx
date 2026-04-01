@@ -146,7 +146,7 @@ export default function Home() {
                 <Type />
               </div>
               <a
-                href="/SELVAPRAVEEN_S_Resume.pdf"
+                href="/SELVAPRAVEEN S's Resume_full-stack.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
