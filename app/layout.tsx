@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar";
+import  Loader  from "@/components/loader";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
@@ -34,17 +35,19 @@ export default function RootLayout({
       <head />
       <body className={clsx("font-sans m-0", fontSans.variable)}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div
-            id="scroll-container"
-            className="h-[100dvh] w-screen overflow-y-scroll
-            [&::-webkit-scrollbar]:w-1.5
-            [&::-webkit-scrollbar-thumb]:rounded-full
-            [&::-webkit-scrollbar-track]:bg-[transparent]
-            [&::-webkit-scrollbar-thumb]:bg-primary"
-          >
-            <Navbar />
-            <main>{children}</main>
-          </div>
+          <Loader>
+            <div
+              id="scroll-container"
+              className="h-[100dvh] w-screen overflow-y-scroll
+              [&::-webkit-scrollbar]:w-1.5
+              [&::-webkit-scrollbar-thumb]:rounded-full
+              [&::-webkit-scrollbar-track]:bg-[transparent]
+              [&::-webkit-scrollbar-thumb]:bg-primary"
+            >
+              <Navbar />
+              <main>{children}</main>
+            </div>
+          </Loader>
         </Providers>
       </body>
     </html>
