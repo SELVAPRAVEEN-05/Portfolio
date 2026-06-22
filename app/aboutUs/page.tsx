@@ -64,8 +64,8 @@ export default function AboutUs() {
             <span className="text-purple-500 font-semibold">
               SELVAPRAVEEN S
             </span>
-            , a 20-year-old Full Stack Web Developer and third-year{" "}
-            <span className="font-medium">B.E. CSE</span> student at Bannari
+            , a 20-year-old Full Stack Web Developer and Final-year{" "}
+            student <span className="font-medium">Doing B.E. CSE</span> at Bannari
             Amman Institute of Technology.
             <span className="hidden xl:inline">
               {" "}
