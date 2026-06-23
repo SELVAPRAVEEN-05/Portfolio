@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+   manifest: "/manifest.json",
   description: siteConfig.description,
   icons: {
     icon: "https://img.freepik.com/premium-vector/sp-letter-logo-design-with-circle-shape-sp-circle-cube-shape-logo-design-sp-monogram-busine_629210-698.jpg",
@@ -32,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head  />
       <body className={clsx("font-sans m-0", fontSans.variable)}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <Loader>
